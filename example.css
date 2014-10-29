@@ -16,7 +16,7 @@ do
   do
     last=$[$i-$si]
     si=$[$si+1]
-    printf "ul.grid li:nth-child($si):nth-last-child($last)"
+    printf "ul.even li:nth-child($si):nth-last-child($last)"
     if [[ $si -ne $i ]]
     then
       echo ","
@@ -29,92 +29,92 @@ done
 
 
 /*[output]*/
-ul.grid li:nth-child(1):nth-last-child(1) { width: calc(100% / 1) }
+ul.even li:nth-child(1):nth-last-child(1) { width: calc(100% / 1) }
 
-ul.grid li:nth-child(1):nth-last-child(2),
-ul.grid li:nth-child(2):nth-last-child(1) { width: calc(100% / 2) }
+ul.even li:nth-child(1):nth-last-child(2),
+ul.even li:nth-child(2):nth-last-child(1) { width: calc(100% / 2) }
 
-ul.grid li:nth-child(1):nth-last-child(3),
-ul.grid li:nth-child(2):nth-last-child(2),
-ul.grid li:nth-child(3):nth-last-child(1) { width: calc(100% / 3) }
+ul.even li:nth-child(1):nth-last-child(3),
+ul.even li:nth-child(2):nth-last-child(2),
+ul.even li:nth-child(3):nth-last-child(1) { width: calc(100% / 3) }
 
-ul.grid li:nth-child(1):nth-last-child(4),
-ul.grid li:nth-child(2):nth-last-child(3),
-ul.grid li:nth-child(3):nth-last-child(2),
-ul.grid li:nth-child(4):nth-last-child(1) { width: calc(100% / 4) }
+ul.even li:nth-child(1):nth-last-child(4),
+ul.even li:nth-child(2):nth-last-child(3),
+ul.even li:nth-child(3):nth-last-child(2),
+ul.even li:nth-child(4):nth-last-child(1) { width: calc(100% / 4) }
 
-ul.grid li:nth-child(1):nth-last-child(5),
-ul.grid li:nth-child(2):nth-last-child(4),
-ul.grid li:nth-child(3):nth-last-child(3),
-ul.grid li:nth-child(4):nth-last-child(2),
-ul.grid li:nth-child(5):nth-last-child(1) { width: calc(100% / 5) }
+ul.even li:nth-child(1):nth-last-child(5),
+ul.even li:nth-child(2):nth-last-child(4),
+ul.even li:nth-child(3):nth-last-child(3),
+ul.even li:nth-child(4):nth-last-child(2),
+ul.even li:nth-child(5):nth-last-child(1) { width: calc(100% / 5) }
 
-ul.grid li:nth-child(1):nth-last-child(6),
-ul.grid li:nth-child(2):nth-last-child(5),
-ul.grid li:nth-child(3):nth-last-child(4),
-ul.grid li:nth-child(4):nth-last-child(3),
-ul.grid li:nth-child(5):nth-last-child(2),
-ul.grid li:nth-child(6):nth-last-child(1) { width: calc(100% / 6) }
+ul.even li:nth-child(1):nth-last-child(6),
+ul.even li:nth-child(2):nth-last-child(5),
+ul.even li:nth-child(3):nth-last-child(4),
+ul.even li:nth-child(4):nth-last-child(3),
+ul.even li:nth-child(5):nth-last-child(2),
+ul.even li:nth-child(6):nth-last-child(1) { width: calc(100% / 6) }
 
-ul.grid li:nth-child(1):nth-last-child(7),
-ul.grid li:nth-child(2):nth-last-child(6),
-ul.grid li:nth-child(3):nth-last-child(5),
-ul.grid li:nth-child(4):nth-last-child(4),
-ul.grid li:nth-child(5):nth-last-child(3),
-ul.grid li:nth-child(6):nth-last-child(2),
-ul.grid li:nth-child(7):nth-last-child(1) { width: calc(100% / 7) }
+ul.even li:nth-child(1):nth-last-child(7),
+ul.even li:nth-child(2):nth-last-child(6),
+ul.even li:nth-child(3):nth-last-child(5),
+ul.even li:nth-child(4):nth-last-child(4),
+ul.even li:nth-child(5):nth-last-child(3),
+ul.even li:nth-child(6):nth-last-child(2),
+ul.even li:nth-child(7):nth-last-child(1) { width: calc(100% / 7) }
 
-ul.grid li:nth-child(1):nth-last-child(8),
-ul.grid li:nth-child(2):nth-last-child(7),
-ul.grid li:nth-child(3):nth-last-child(6),
-ul.grid li:nth-child(4):nth-last-child(5),
-ul.grid li:nth-child(5):nth-last-child(4),
-ul.grid li:nth-child(6):nth-last-child(3),
-ul.grid li:nth-child(7):nth-last-child(2),
-ul.grid li:nth-child(8):nth-last-child(1) { width: calc(100% / 8) }
+ul.even li:nth-child(1):nth-last-child(8),
+ul.even li:nth-child(2):nth-last-child(7),
+ul.even li:nth-child(3):nth-last-child(6),
+ul.even li:nth-child(4):nth-last-child(5),
+ul.even li:nth-child(5):nth-last-child(4),
+ul.even li:nth-child(6):nth-last-child(3),
+ul.even li:nth-child(7):nth-last-child(2),
+ul.even li:nth-child(8):nth-last-child(1) { width: calc(100% / 8) }
 
-ul.grid li:nth-child(1):nth-last-child(9),
-ul.grid li:nth-child(2):nth-last-child(8),
-ul.grid li:nth-child(3):nth-last-child(7),
-ul.grid li:nth-child(4):nth-last-child(6),
-ul.grid li:nth-child(5):nth-last-child(5),
-ul.grid li:nth-child(6):nth-last-child(4),
-ul.grid li:nth-child(7):nth-last-child(3),
-ul.grid li:nth-child(8):nth-last-child(2),
-ul.grid li:nth-child(9):nth-last-child(1) { width: calc(100% / 9) }
+ul.even li:nth-child(1):nth-last-child(9),
+ul.even li:nth-child(2):nth-last-child(8),
+ul.even li:nth-child(3):nth-last-child(7),
+ul.even li:nth-child(4):nth-last-child(6),
+ul.even li:nth-child(5):nth-last-child(5),
+ul.even li:nth-child(6):nth-last-child(4),
+ul.even li:nth-child(7):nth-last-child(3),
+ul.even li:nth-child(8):nth-last-child(2),
+ul.even li:nth-child(9):nth-last-child(1) { width: calc(100% / 9) }
 
-ul.grid li:nth-child(1):nth-last-child(10),
-ul.grid li:nth-child(2):nth-last-child(9),
-ul.grid li:nth-child(3):nth-last-child(8),
-ul.grid li:nth-child(4):nth-last-child(7),
-ul.grid li:nth-child(5):nth-last-child(6),
-ul.grid li:nth-child(6):nth-last-child(5),
-ul.grid li:nth-child(7):nth-last-child(4),
-ul.grid li:nth-child(8):nth-last-child(3),
-ul.grid li:nth-child(9):nth-last-child(2),
-ul.grid li:nth-child(10):nth-last-child(1) { width: calc(100% / 10) }
+ul.even li:nth-child(1):nth-last-child(10),
+ul.even li:nth-child(2):nth-last-child(9),
+ul.even li:nth-child(3):nth-last-child(8),
+ul.even li:nth-child(4):nth-last-child(7),
+ul.even li:nth-child(5):nth-last-child(6),
+ul.even li:nth-child(6):nth-last-child(5),
+ul.even li:nth-child(7):nth-last-child(4),
+ul.even li:nth-child(8):nth-last-child(3),
+ul.even li:nth-child(9):nth-last-child(2),
+ul.even li:nth-child(10):nth-last-child(1) { width: calc(100% / 10) }
 
-ul.grid li:nth-child(1):nth-last-child(11),
-ul.grid li:nth-child(2):nth-last-child(10),
-ul.grid li:nth-child(3):nth-last-child(9),
-ul.grid li:nth-child(4):nth-last-child(8),
-ul.grid li:nth-child(5):nth-last-child(7),
-ul.grid li:nth-child(6):nth-last-child(6),
-ul.grid li:nth-child(7):nth-last-child(5),
-ul.grid li:nth-child(8):nth-last-child(4),
-ul.grid li:nth-child(9):nth-last-child(3),
-ul.grid li:nth-child(10):nth-last-child(2),
-ul.grid li:nth-child(11):nth-last-child(1) { width: calc(100% / 11) }
+ul.even li:nth-child(1):nth-last-child(11),
+ul.even li:nth-child(2):nth-last-child(10),
+ul.even li:nth-child(3):nth-last-child(9),
+ul.even li:nth-child(4):nth-last-child(8),
+ul.even li:nth-child(5):nth-last-child(7),
+ul.even li:nth-child(6):nth-last-child(6),
+ul.even li:nth-child(7):nth-last-child(5),
+ul.even li:nth-child(8):nth-last-child(4),
+ul.even li:nth-child(9):nth-last-child(3),
+ul.even li:nth-child(10):nth-last-child(2),
+ul.even li:nth-child(11):nth-last-child(1) { width: calc(100% / 11) }
 
-ul.grid li:nth-child(1):nth-last-child(12),
-ul.grid li:nth-child(2):nth-last-child(11),
-ul.grid li:nth-child(3):nth-last-child(10),
-ul.grid li:nth-child(4):nth-last-child(9),
-ul.grid li:nth-child(5):nth-last-child(8),
-ul.grid li:nth-child(6):nth-last-child(7),
-ul.grid li:nth-child(7):nth-last-child(6),
-ul.grid li:nth-child(8):nth-last-child(5),
-ul.grid li:nth-child(9):nth-last-child(4),
-ul.grid li:nth-child(10):nth-last-child(3),
-ul.grid li:nth-child(11):nth-last-child(2),
-ul.grid li:nth-child(12):nth-last-child(1) { width: calc(100% / 12) }
+ul.even li:nth-child(1):nth-last-child(12),
+ul.even li:nth-child(2):nth-last-child(11),
+ul.even li:nth-child(3):nth-last-child(10),
+ul.even li:nth-child(4):nth-last-child(9),
+ul.even li:nth-child(5):nth-last-child(8),
+ul.even li:nth-child(6):nth-last-child(7),
+ul.even li:nth-child(7):nth-last-child(6),
+ul.even li:nth-child(8):nth-last-child(5),
+ul.even li:nth-child(9):nth-last-child(4),
+ul.even li:nth-child(10):nth-last-child(3),
+ul.even li:nth-child(11):nth-last-child(2),
+ul.even li:nth-child(12):nth-last-child(1) { width: calc(100% / 12) }
