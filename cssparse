@@ -1,0 +1,67 @@
+#!/bin/bash
+if [[ $1 == '' ]]
+then
+  while true
+  do
+    read -p "Enter a CSS file to parse: " toParse
+    if [[ $toParse != '' ]]
+    then
+      break
+    fi
+  done
+else
+  toParse=$1
+fi
+
+script=''
+parse=0
+css=`cat $toParse`
+
+
+# find out how many scripts there are in the CSS file
+
+while read line
+do
+  if [[ $line == *'[script]'* ]]
+  then
+    num=$[$num+1]
+  fi
+done <<< "$css"
+
+while read line
+do
+  if [[ $line == *'[script]'* ]]
+  then  
+    parse=1
+  fi
+  if [[ $line == *'[/script]'* ]]
+  then  
+    parse=0
+  fi
+
+  if [[ $parse -eq 1 ]] && [[ $line != *'[script]'* ]]
+  then
+    script+="$line"$'\n'
+  fi
+done <<< "$css"
+
+touch bashcsstmp.sh
+
+echo "$script" > "bashcsstmp.sh"
+
+result=`sh bashcsstmp.sh`
+
+rm 'bashcsstmp.sh'
+
+output=`awk '/\[output\]/{ print NR; exit }' "$toParse"`
+if [[ $output != '' ]]
+then
+  prev=`sed -e '/\[output\]/,$d' "$toParse"`
+  echo "$prev" > "$toParse"
+fi
+echo '' >> "$toParse"
+echo '' >> "$toParse"
+echo '/*[output]*/' >> "$toParse"
+echo "$result" >> "$toParse"
+echo "Parse Complete"
+
